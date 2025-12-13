@@ -1,4 +1,4 @@
-/* DAY 3 LAB: SORTING & LOGIC
+/* LAB: SORTING & LOGIC
    Database: Pagila
 */
 

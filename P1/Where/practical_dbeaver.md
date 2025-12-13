@@ -1,4 +1,4 @@
-/* DAY 2 LAB: FILTERING
+/* LAB: FILTERING
    Database: Pagila
 */
 
