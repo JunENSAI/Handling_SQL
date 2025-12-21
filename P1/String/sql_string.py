@@ -21,8 +21,6 @@ def clean_emails():
     print(df.head(3))
     
     # Python String Manipulation
-    # Logic: Split the string by '@' and take the second part (index 1)
-    # Note: In Python, we use apply() or vector functions .str
     
     df['domain'] = df['email'].apply(lambda x: x.split('@')[1])
     
