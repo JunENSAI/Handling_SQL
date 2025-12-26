@@ -4,11 +4,8 @@
 
 ```SQL
 -- 1. Scalar Subquery (The "Average" Comparison)
--- Step A: Find the average length (Run this alone first to see the number)
--- SELECT AVG(length) FROM film; -- Result is roughly 115.27
-
--- Step B: Use it in the WHERE clause
--- "Find all films longer than average."
+-- Task: Find the average length (Run this alone first to see the number)
+-- Find all films longer than average."
 SELECT 
     title, 
     length 
@@ -18,7 +15,7 @@ ORDER BY length DESC;
 
 -- 2. List Subquery (Using IN)
 -- "Find all films that have been returned between specific dates."
--- This is often cleaner than a complex JOIN if you don't need columns from the other table.
+
 SELECT title
 FROM film
 WHERE film_id IN (
@@ -29,7 +26,6 @@ WHERE film_id IN (
 );
 
 -- 3. Subquery in FROM (Derived Table)
--- Sometimes you need to aggregate data, and then aggregate the result AGAIN.
 -- "What is the average total spend per customer?"
 -- Logic: 
 --    1. Calculate SUM(amount) for each customer (Inner Query).
