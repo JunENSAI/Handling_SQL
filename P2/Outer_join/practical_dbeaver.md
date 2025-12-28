@@ -1,6 +1,6 @@
-/* OUTER JOINS
-   Database: Pagila
-*/
+`OUTER JOINS`
+
+**Database: Pagila**
 
 ```sql
 -- 1. Basic LEFT JOIN

@@ -1,6 +1,7 @@
-/* INNER JOINS
-   Database: Pagila
-*/
+`INNER JOINS`
+
+**Database: Pagila**
+
 
 ```sql
 -- 1. The Basic Join

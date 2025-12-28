@@ -1,6 +1,6 @@
-/* GROUP BY & HAVING
-   Database: Pagila
-*/
+`GROUP BY & HAVING`
+
+**Database: Pagila**
 
 ```SQL
 -- 1. Simple Grouping

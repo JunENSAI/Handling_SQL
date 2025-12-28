@@ -1,6 +1,6 @@
-/* SUBQUERIES
-   Database: Pagila
-*/
+`SUBQUERIES`
+
+**Database: Pagila**
 
 ```SQL
 -- 1. Scalar Subquery (The "Average" Comparison)

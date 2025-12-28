@@ -1,6 +1,6 @@
-/* AGGREGATION
-   Database: Pagila
-*/
+`AGGREGATION`
+
+**Database: Pagila**
 
 ```SQL
 

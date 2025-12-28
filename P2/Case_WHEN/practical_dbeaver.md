@@ -1,6 +1,6 @@
-/* CASE WHEN
-   Database: Pagila
-*/
+`CASE WHEN`
+
+**Database: Pagila**
 
 ```sql
 

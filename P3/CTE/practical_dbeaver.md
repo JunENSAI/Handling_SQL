@@ -1,8 +1,7 @@
-/* CTE
-   Database: Pagila
-*/
+`CTE`
 
-*Instructions: We will rewrite your "Subquery in FROM" solution from Day 13 using CTEs.*
+**Database: Pagila**
+
 
 ```sql
 -- 1. The Basics

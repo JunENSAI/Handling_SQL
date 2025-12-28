@@ -1,6 +1,6 @@
-/* RANKING
-   Database: Pagila
-*/
+`RANKING`
+
+**Database: Pagila**
 
 ```sql
 -- 1. ROW_NUMBER
