@@ -23,7 +23,7 @@ SELECT
     payment_date,
     SUM(amount) AS total_payment
 FROM payment
-GROUP BY payment_date;
+GROUP BY DATE(payment_date); -- because payment_date is TIMESTAMP so every second must be counted if we don't specify DATE()
 ```
 
 ## Question 3
