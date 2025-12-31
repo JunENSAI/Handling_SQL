@@ -48,6 +48,4 @@ Pandas `to_sql` uses a method called `executemany` which is faster, but for mill
 
     - Assume the "Current Price" is simply the close_price from the most recent date in the stock_prices table.
 
-    - Hint: This requires joining holdings -> companies -> stock_prices. You might need a CTE to find the "latest price" for each company first.
-
 ---

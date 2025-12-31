@@ -1,8 +1,5 @@
-`PL/pgSQL`
+--PL/pgSQL : Pagila DB
 
-**Database: Pagila**
-
-```sql
 -- 1. Create a Simple Calculation Function
 -- We want a standard way to calculate late fees: $1.00 per day late.
 CREATE OR REPLACE FUNCTION calculate_late_fee(return_date TIMESTAMP, rental_date TIMESTAMP, duration INT)
@@ -40,4 +37,3 @@ SELECT
 FROM rental
 WHERE return_date IS NOT NULL
 LIMIT 5;
-```

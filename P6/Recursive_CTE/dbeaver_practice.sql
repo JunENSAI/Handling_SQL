@@ -1,8 +1,6 @@
-`RECURSIVE CTE`
+--RECURSIVE CTE : Pagila DB
 
-**Database: Pagila**
 
-```sql
 -- Setup: Create a tiny Org Chart
 CREATE TABLE company_org (
     emp_id INT PRIMARY KEY,
@@ -62,4 +60,3 @@ WITH RECURSIVE paths AS (
     JOIN paths h ON e.manager_id = h.emp_id
 )
 SELECT * FROM paths;
-```
