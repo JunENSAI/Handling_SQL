@@ -1,8 +1,5 @@
-`INDEXING`
+-- INDEXING : Pagila DB
 
-**Database: Pagila**
-
-```sql
 -- 1. The Baseline (No Index)
 -- Let's search for payments by a specific amount.
 EXPLAIN ANALYZE
@@ -30,4 +27,3 @@ ON payment (customer_id, payment_date);
 -- 5. Cleanup
 DROP INDEX idx_payment_amount;
 DROP INDEX idx_customer_date;
-```

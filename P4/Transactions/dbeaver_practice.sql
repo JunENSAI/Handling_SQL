@@ -1,7 +1,5 @@
-`TRANSACTIONS`
+-- TRANSACTIONS : Pagila DB
 
-**Database: Pagila**
-```sql
 -- Setup: Create a simple bank table
 CREATE TABLE my_bank (
     user_id SERIAL PRIMARY KEY,
@@ -43,4 +41,3 @@ BEGIN;
     
     ROLLBACK TO SAVEPOINT step_1; -- We undo the 5000, but keep the 10.
 COMMIT;
-```

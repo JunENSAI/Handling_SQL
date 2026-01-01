@@ -1,6 +1,6 @@
-## Part 1 : Schema Design
+-- Part 1 : Schema Design
 
-```sql
+
 -- user table
 CREATE TABLE users (
     user_id SERIAL PRIMARY KEY,
@@ -33,12 +33,9 @@ CREATE TABLE streams (
     stream_date TIMESTAMP DEFAULT NOW(),
     device_type TEXT
 );
-```
----
 
-## Part 2 : Builder
+-- Part 2 : Builder
 
-```sql
 INSERT INTO artists (name, genre) VALUE ('The Weeknd', 'Pop'), ('Daft Punk', 'Electro');
 
 INSERT INTO songs (artist_id, title, duration_seconds, release_date) VALUES (1, 'Blinding Lights', 204, '2020-08-23'), (1, 'Save your tears', 217, '2020-08-22'), (1, 'Call out my name', 229, '2018-02-26'), (2, 'Get lucky', 249, '2013-06-10'), (2, 'Instant crush', 340, '2013-06-13'), (2, 'I feel it coming', 298, '2016-02-12');
@@ -55,12 +52,10 @@ BEGIN;
 INSERT INTO users (email, subscription_plan, country) VALUES ('ceo@streamify.com', 'Premium', 'GB')
 ON CONFLICT (email) 
 DO NOTHING;
-```
 
 
-## Part 3 : The Analyst
+-- Part 3 : The Analyst
 
-```sql
 -- Top 3 songs
 SELECT 
     s.title,
@@ -101,4 +96,3 @@ JOIN songs s ON st.song_id = s.song_id
 JOIN artists a ON s.artist_id = a.artist_id
 WHERE a.name = 'The Weeknd'
 ORDER BY st.stream_date;
-```

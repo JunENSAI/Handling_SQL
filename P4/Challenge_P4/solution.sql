@@ -1,6 +1,5 @@
-## Question 1
+-- Question 1
 
-```sql
 CREATE TABLE users (
     user_id SERIAL PRIMARY KEY,
     email TEXT UNIQUE NOT NULL,
@@ -20,11 +19,9 @@ CREATE TABLE orders (
     total NUMERIC(5,2) CHECK (total > 0),
     status TEXT DEFAULT 'Pending' CHECK (status IN ('Pending', 'Delivered', 'Cancelled'))
 );
-```
 
-## Question 2
+-- Question 2
 
-```sql
 BEGIN;
 INSERT INTO orders (user_id,rest_id,total) VALUES (1,5,50);
 UPDATE users
@@ -32,28 +29,23 @@ SET last_active = NOW()
 WHERE user_id = 1;
 -- ROLLBACK;
 COMMIT;
-```
 
-## Question 3
+-- Question 3
 
-```sql
 CREATE INDEX idx_order_status
 ON orders(user_id, status)
-```
 
-`user_id` is the most selective column (there are thousands of users, but only 3 statuses). Narrowing down to "User 99" first makes the list very short, then checking for "Delivered" is instant.
 
-## Question 4
+-- `user_id` is the most selective column (there are thousands of users, but only 3 statuses). Narrowing down to "User 99" first makes the list very short, then checking for "Delivered" is instant.
 
-```sql
+-- Question 4
+
 INSERT INTO restaurant (rest_id,name,rating) VALUES (10,'Burger King', 3.5)
 ON CONFLICT (rest_id)
 DO UPDATE SET rating = 3.5;
-```
 
-## Question 5
+-- Question 5
 
-```sql
 CREATE VIEW support_dashboard AS
 SELECT
     ord.order_id,
@@ -64,5 +56,3 @@ SELECT
 FROM orders as ord
 JOIN restaurants resto on ord.rest_id = resto.rest_id
 WHERE ord.status <> 'Delivered';
-```
-

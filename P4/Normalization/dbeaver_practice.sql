@@ -1,8 +1,5 @@
-`NORMALIZATION`
+-- NORMALIZATION : Pagila DB
 
-**Database: Pagila**
-
-```sql
 -- 1. The Bad Table (Denormalized)
 CREATE TABLE bad_orders (
     order_id SERIAL PRIMARY KEY,
@@ -47,4 +44,3 @@ CREATE TABLE norm_orders (
 );
 
 -- Now, if TechCorp changes phone numbers, we update ONE row in norm_suppliers.
-```

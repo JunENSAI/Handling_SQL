@@ -1,8 +1,5 @@
-`CREATE & ALTER`
+-- CREATE & ALTER : Pagila DB
 
-**Database: Pagila**
-
-```sql
 -- 1. Create a Table
 CREATE TABLE my_staff_log (
     log_id SERIAL PRIMARY KEY,

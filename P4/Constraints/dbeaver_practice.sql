@@ -1,8 +1,5 @@
-`CONSTRAINTS`
+-- CONSTRAINTS : Pagila DB
 
-**Database: Pagila**
-
-```sql
 -- 1. Create the Parent Table (Authors)
 CREATE TABLE my_authors (
     author_id SERIAL PRIMARY KEY,
@@ -36,4 +33,3 @@ INSERT INTO my_books (title, price, author_id) VALUES ('Harry Potter', 19.99, 1)
 -- Trying to add a book for Author ID 999 (who doesn't exist).
 -- INSERT INTO my_books (title, price, author_id) VALUES ('Ghost Book', 10.00, 999);
 -- Error: insert or update on table "my_books" violates foreign key constraint
-```

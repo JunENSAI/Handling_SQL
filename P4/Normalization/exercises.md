@@ -27,19 +27,3 @@ You have
 ## Question 3
 
 **Write the CREATE TABLE statements to normalize the gym_visits table from Question 2 into 3NF.**
-
-```sql
-CREATE TABLE gym (
-    gym_location VARCHAR(50) PRIMARY KEY,
-    gym_adress VARCHAR(50)
-);
-
-CREATE TABLE visit(
-    visitor_id SERIAL PRIMARY KEY,
-    visit_date DATE,
-    gym_location VARCHAR(50) REFERENCES gym(gym_location)
-);
-```
-
-
-(You should end up with 2 tables: gyms and visits. Define Primary Keys and Foreign Keys).

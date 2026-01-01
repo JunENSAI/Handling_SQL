@@ -1,4 +1,5 @@
-## Question 1 
+## Question 1
+
 Create a table **employees** with:
 
 - `id:` Serial PK.
@@ -7,12 +8,6 @@ Create a table **employees** with:
 
 - Add a `CHECK constraint` to ensure salary is greater than 10,000.
 
-```sql
-CREATE TABLE employees (
-    id SERIAL PRIMARY KEY,
-    salary INTEGER CHECK (salary > 10000)
-);
-```
 
 ## Question 2
 Create a table **orders** with:
@@ -22,13 +17,6 @@ Create a table **orders** with:
 - `status`: Text.
 
 - Add a `CHECK constraint` that forces status to be either 'Pending', 'Shipped', or 'Delivered'.
-
-```sql
-CREATE TABLE orders (
-    order_id SERIAL PRIMARY KEY,
-    status TEXT CHECK (status in ('Pending','Shipped','Delivered'))
-);
-```
 
 ## Question 3
 
@@ -43,17 +31,3 @@ CREATE TABLE orders (
     - `Foreign Key`: dept_id must reference departments(dept_id).
 
     - `Unique Constraint:` A combination of columns. Ensure that a staff member (use a dummy column staff_name for now) cannot be assigned to the same department twice.
-
-```sql
-CREATE TABLE departments (
-    dept_id SERIAL PRIMARY KEY,
-    dept_name TEXT UNIQUE
-);
-
-CREATE TABLE staff_assignments (
-    assignment_id SERIAL PRIMARY KEY,
-    dept_id INTEGER REFERENCES departments(dept_id),
-    staff_name VARCHAR(50),
-    UNIQUE(staff_name, dept_id)
-);
-```

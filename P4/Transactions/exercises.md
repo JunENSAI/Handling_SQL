@@ -8,12 +8,6 @@ Write the SQL commands to:
 
 - Save the changes permanently.
 
-```sql
-BEGIN;
-INSERT INTO my_bank (name, balance) VALUES ('Charlie', 0);
-COMMIT;
-```
-
 ## Question 2
 
 Write the SQL commands to:
@@ -26,21 +20,13 @@ Write the SQL commands to:
 
 - Undo the update so Charlie goes back to 0.
 
-```sql
-BEGIN;
-UPDATE my_bank SET balance = balance + 1000 WHERE name = 'Charlie';
-ROLLBACK; -- there is a mistake, we undo the update
-```
-
 ## Question 3
 
-You run:
+Run:
 
 ```SQL
-
 BEGIN;
-UPDATE my_bank SET balance = 0 WHERE name = 'Alice';
--- You do NOT run COMMIT yet.
+UPDATE my_bank SET balance = 0 WHERE name = 'Alice';.
 ```
 Then, you open a second DBeaver window (a new connection) and run: `SELECT * FROM my_bank WHERE name = 'Alice';`
 

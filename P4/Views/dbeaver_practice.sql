@@ -1,8 +1,5 @@
-`VIEWS`
+-- VIEWS : Pagila DB
 
-**Database: Pagila**
-
-```sql
 -- 1. Create a Standard View
 -- Let's create a "Master List" of customer details (Name + Address + City + Country).
 CREATE OR REPLACE VIEW customer_master_list AS
@@ -48,4 +45,3 @@ REFRESH MATERIALIZED VIEW category_revenue_mat;
 -- 6. Drop them
 DROP VIEW customer_master_list;
 DROP MATERIALIZED VIEW category_revenue_mat;
-```

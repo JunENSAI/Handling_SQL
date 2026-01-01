@@ -1,8 +1,5 @@
-`DML`
+-- DML : Pagila DB
 
-**Database: Pagila**
-
-```sql
 -- Setup: Create a sandbox table
 CREATE TABLE my_todo (
     task_id SERIAL PRIMARY KEY,
@@ -44,4 +41,3 @@ ON CONFLICT (task_id)
 DO UPDATE SET task = EXCLUDED.task; -- "EXCLUDED" means the value we tried to insert
 
 SELECT * FROM my_todo WHERE task_id = 1;
-```
