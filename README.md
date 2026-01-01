@@ -84,3 +84,97 @@ To run the code in `.sql` file you must have :
     - You need to import the three `.sql` file from pagila folder one by one
 
 ---
+
+## Contents 
+
+### P1 : Basics Queries
+
+- Retrieve information from columns that you need with : `SELECT`
+
+- Filter the information with condition that you specified : `WHERE`
+
+- Order the numerical values by : `ORDER BY`
+
+- Acknowledge the types existed on SQL : `BOOLEAN`, `INTEGER`, `DATE`...
+
+- How to manipulate string type : `||`, `LENGTH()`, `UPPER()`...
+
+---
+
+### P2 : Aggregation & Relational Logic
+
+- Basic Aggregation : `COUNT`, `SUM`, `AVG`, `MIN`, `MAX`
+
+- Grouping by one or multiple columns by : `GROUP BY`
+
+- Understanding Primary Keys (PK) and Foreign Keys (FK) : `INNER JOIN`
+
+- Finding "missing" data : `OUTER JOIN`
+
+- Creating "If-Then-Else" logic inside a SELECT statement to categorize data : `CASE WHEN`
+
+- Make nested queries : `Subqueries` --> `SELECT(... SELECT(...))`
+
+---
+
+### P3 : Analytics
+
+- Using WITH clauses to break complex queries into readable chunks : `CTE`
+
+- Window Functions part 1 : `RANK`, `ROW_NUMBER()`, `DENSE_RANK`
+
+- Window Function part 2 : `LAG()`, `LEAD()`
+
+- Window Function part 3 : `SUM() OVER(...)`, `AVG() OVER(...)`
+
+- Set Operations : `UNION`, `UNION ALL` , `INTERSECT`, `EXCEPT`
+
+- Arrays & JSONB in Postgres : `jsonb_build_object(...)`
+
+---
+
+### P4 : Database Design & Management
+
+- Data Definition Language : `CREATE TABLE`, `ALTER TABLE`, `DROP TABLE`
+
+- Data Integrity Constraints : `PRIMARY KEY`, `REFERENCES`, `UNIQUE`, `CHECK(...)`
+
+- Data Manipulation Language : `INSERT`, `UPDATE`, `DELETE`
+
+- Views and Materialized Views : `CREATE VIEW ...`, `CREATE MATERIALIZED VIEW`
+
+- Indexing to speed up the search : `CREATE INDEX ...`
+
+- Transactions : `BEGIN`, `COMMIT`, `ROLLBACK`
+
+---
+
+### P5 : Python integrations
+
+- Preventing SQL Injection by passing variables safely in Python : `Parameterized Queries`  
+
+- The Pandas Workflow : `pd.read_sql()`, `df.to_sql()`
+
+- Using the SQLAlchemy Engine for better connection management : `SqlAlchemy`
+
+- Extract data from a CSV, Transform it in Pandas, Load it into Postgres : `ETL`
+
+---
+
+### P6 : Advanced Concepts
+
+- Handling hierarchical data (e.g., Organization charts, Category trees) : `Recursive CTE`
+
+- Simple PL/pgSQL functions to encapsulate logic : `Procedures & Functions`
+
+---
+
+### Project
+
+- `Part 1` : Design the Schema (Tables, Keys) that needed to handle a example of Stock market analysis
+
+- `Part 2` : Use Python to generate or fetch data (using yfinance library) and load it into the DB.
+
+- `Part 3` : Add a database view and a Python-based plotting script to visualize historical data.
+
+---
