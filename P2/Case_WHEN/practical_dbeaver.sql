@@ -1,8 +1,4 @@
-`CASE WHEN`
-
-**Database: Pagila**
-
-```sql
+-- CASE WHEN : Pagila DB
 
 -- 1. Basic Categorization
 -- Label movies based on their length.
@@ -53,4 +49,3 @@ SELECT
     END AS status
 FROM customer
 LIMIT 10;
-```

@@ -1,12 +1,4 @@
-### File 2: Lab Exercises (SQL)
-**Filename:** `day_01_lab.sql`
-
-*Instructions: Open DBeaver, connect to the `pagila` database, open a new SQL Script, and copy/paste this code to run it.*
-
-```sql
-/* DAY 1 LAB: SELECT FUNDAMENTALS
-   Database: Pagila
-*/
+-- SELECT FUNDAMENTALS : Pagila DB
 
 -- 1. The "Hello World" of SQL
 -- Retrieve everything from the actor table.
@@ -47,4 +39,3 @@ SELECT
 	replacement_cost - rental_rate AS cost_difference
 FROM film
 LIMIT 10;
-```

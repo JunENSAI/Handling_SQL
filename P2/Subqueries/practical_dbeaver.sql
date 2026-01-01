@@ -1,8 +1,5 @@
-`SUBQUERIES`
+-- SUBQUERIES : Pagila DB
 
-**Database: Pagila**
-
-```SQL
 -- 1. Scalar Subquery (The "Average" Comparison)
 -- Task: Find the average length (Run this alone first to see the number)
 -- Find all films longer than average."
@@ -47,4 +44,3 @@ SELECT
     length - (SELECT AVG(length) FROM film) AS diff_from_avg
 FROM film
 LIMIT 10;
-```

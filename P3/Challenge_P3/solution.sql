@@ -1,6 +1,5 @@
-## Question 1
+-- Question 1
 
-```sql
 WITH staff_monthly_sales AS (
     SELECT 
         staff_id,
@@ -19,13 +18,12 @@ SELECT
     ) as running_total_revenue
 FROM staff_monthly_sales
 ORDER BY staff_id, pay_month;
-```
 
-*Note* : **When you didn't GROUP BY staff and month. Your result has thousands of rows (every individual payment) instead of just one row per staff/month.**
 
-## Question 2
+-- Note : When you didn't GROUP BY staff and month. Your result has thousands of rows (every individual payment) instead of just one row per staff/month.
 
-```sql
+-- Question 2
+
 WITH monthly_stats AS (
     SELECT 
         DATE_TRUNC('month', payment_date) as payment_month,
@@ -40,11 +38,9 @@ SELECT
     (current_rev - LAG(current_rev, 1) OVER (ORDER BY payment_month)) 
     / NULLIF(LAG(current_rev, 1) OVER (ORDER BY payment_month), 0) * 100 as growth_percent
 FROM monthly_stats;
-```
 
-## Question 3
+-- Question 3
 
-```sql
 WITH customer_totals AS (
     SELECT 
         customer_id,
@@ -61,13 +57,11 @@ ranked_customers AS (
 )
 SELECT * FROM ranked_customers
 WHERE rank_val <= 5;
-```
 
-*Note* : `SUM(amount) OVER (PARTITION BY customer_id)` puts the total on every single row for that customer.
+-- Note : SUM(amount) OVER (PARTITION BY customer_id) puts the total on every single row for that customer.
 
-## Question 4
+-- Question 4
 
-```sql
 WITH rental_duration AS (
     SELECT 
         customer_id,
@@ -82,11 +76,9 @@ SELECT
     AVG(duration) OVER(PARTITION BY customer_id) as avg_customer_duration,
     duration - AVG(duration) OVER(PARTITION BY customer_id) as difference
 FROM rental_duration;
-```
 
-## Question 5
+-- Question 5
 
-```sql
 WITH rental_watcher AS (
     SELECT 
         customer_id,
@@ -102,6 +94,5 @@ SELECT
     time_gap
 FROM rental_watcher
 WHERE time_gap < '1day';
-```
 
-*Note_correction* : Without `ORDER BY` inside the OVER(), **the database doesn't know which rental came "before" the current one. It might pick a random one**.
+-- Note_correction : Without `ORDER BY` inside the OVER(), **the database doesn't know which rental came "before" the current one. It might pick a random one.

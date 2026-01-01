@@ -1,9 +1,5 @@
-/* LAB: DATE & TIME
-   Database: Pagila
-*/
+-- DATE & TIME : Pagila DB
 
-
-```sql
 -- 1. Current Time
 -- Run this to see what Postgres thinks "Now" is.
 SELECT CURRENT_DATE, NOW();
@@ -55,4 +51,3 @@ SELECT
 	TO_CHAR(rental_date, 'Day, DD Month YYYY') AS pretty_date
 FROM rental
 LIMIT 5;
-```

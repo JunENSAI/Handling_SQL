@@ -1,8 +1,5 @@
-`LAG & LEAD`
-   
-**Database: Pagila**
+-- LAG & LEAD : Pagila DB
 
-```sql
 -- 1. Simple LAG
 -- Show the payment amount, and the amount of the PREVIOUS payment, side-by-side.
 SELECT 
@@ -46,4 +43,3 @@ SELECT
     LEAD(rental_date, 1) OVER (PARTITION BY customer_id ORDER BY rental_date) - rental_date as time_gap
 FROM rental
 LIMIT 20;
-```

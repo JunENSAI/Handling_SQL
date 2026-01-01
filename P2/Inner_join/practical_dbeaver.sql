@@ -1,9 +1,5 @@
-`INNER JOINS`
+-- INNER JOINS : Pagila DB
 
-**Database: Pagila**
-
-
-```sql
 -- 1. The Basic Join
 -- We want to see the name of the customer alongside their payment amount.
 -- (Customer Table) + (Payment Table)
@@ -55,4 +51,3 @@ INNER JOIN payment p
 GROUP BY c.customer_id, c.first_name, c.last_name
 ORDER BY total_spend DESC
 LIMIT 5;
-```

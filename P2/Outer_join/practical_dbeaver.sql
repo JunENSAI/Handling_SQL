@@ -1,8 +1,5 @@
-`OUTER JOINS`
+-- OUTER JOINS : Pagila DB
 
-**Database: Pagila**
-
-```sql
 -- 1. Basic LEFT JOIN
 -- Show all Films, and their Inventory IDs.
 -- Note: Some films might not be in our inventory (we don't own the DVD).
@@ -47,4 +44,3 @@ LEFT JOIN payment p
     ON c.customer_id = p.customer_id
 GROUP BY c.customer_id, c.first_name, c.last_name
 ORDER BY total_spend ASC;
-```

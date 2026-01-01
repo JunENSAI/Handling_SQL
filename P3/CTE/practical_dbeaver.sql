@@ -1,9 +1,5 @@
-`CTE`
+-- CTE : Pagila DB
 
-**Database: Pagila**
-
-
-```sql
 -- 1. The Basics
 -- Calculate the average rental rate of films, then find films that cost more than that.
 WITH avg_price_cte AS (
@@ -60,4 +56,3 @@ top_5_categories AS (
 )
 -- Step 3: Final Output
 SELECT * FROM top_5_categories;
-```

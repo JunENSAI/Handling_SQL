@@ -1,8 +1,4 @@
-`AGGREGATION`
-
-**Database: Pagila**
-
-```SQL
+-- AGGREGATION : Pagila DB
 
 -- 1. Simple Counting
 -- How many movies are in our database?
@@ -44,5 +40,3 @@ SELECT
 	COUNT(*) AS total_payments,
 	COUNT(DISTINCT customer_id) AS unique_customers
 FROM payment;
-
-```

@@ -1,8 +1,4 @@
-/* LAB: DATA TYPES & CASTING
-   Database: Pagila
-*/
-
-```sql
+-- DATA TYPES & CASTING : Pagila DB
 
 -- 1. Checking Data Types
 -- In DBeaver, you can see types in the "Properties" tab of a table.
@@ -36,4 +32,3 @@ SELECT
 	'yes'::boolean, 
 	'on'::boolean, 
 	1::boolean; -- All of these evaluate to TRUE
-```

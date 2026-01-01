@@ -1,8 +1,5 @@
-/* LAB: FILTERING
-   Database: Pagila
-*/
+-- FILTERING : Pagila DB
 
-```sql
 -- 1. Exact Match
 -- Find all movies rated 'R'.
 SELECT title, rating, length
@@ -48,4 +45,3 @@ SELECT title, rating, rental_rate
 FROM film
 WHERE rating = 'PG-13' 
   AND rental_rate < 2.99;
-```

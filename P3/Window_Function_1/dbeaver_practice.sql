@@ -1,8 +1,5 @@
-`RANKING`
+-- RANKING : Pagila DB
 
-**Database: Pagila**
-
-```sql
 -- 1. ROW_NUMBER
 -- Assign a unique ID to every rental based on the rental date.
 SELECT 
@@ -32,4 +29,5 @@ SELECT
 FROM film
 WHERE length > 180
 ORDER BY length DESC;
+
 -- Notice: RANK skips numbers (1, 1, 3). DENSE_RANK does not (1, 1, 2).

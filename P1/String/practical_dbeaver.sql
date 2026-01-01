@@ -1,8 +1,5 @@
-/* STRING MANIPULATION --
-   Database: Pagila
-*/
+-- STRING MANIPULATION : Pagila DB
 
-```sql
 -- 1. Concatenation (The || Operator)
 -- Create a "Full Name" column.
 SELECT 
@@ -45,4 +42,3 @@ SELECT
 	SUBSTRING(email FROM POSITION('@' IN email) + 1) AS domain_only
 FROM customer
 LIMIT 10;
-```

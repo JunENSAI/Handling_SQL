@@ -1,8 +1,5 @@
-`GROUP BY & HAVING`
+-- GROUP BY & HAVING : Pagila DB
 
-**Database: Pagila**
-
-```SQL
 -- 1. Simple Grouping
 -- How many movies do we have for each rating (G, PG, etc.)?
 SELECT 
@@ -44,4 +41,3 @@ SELECT
     SUM(amount) AS total_processed
 FROM payment
 GROUP BY staff_id;
-```

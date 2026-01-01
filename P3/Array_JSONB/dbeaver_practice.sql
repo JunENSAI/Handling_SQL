@@ -1,8 +1,5 @@
-`JSONB`
+-- JSONB : Pagila DB
 
-**Database: Pagila**
-
-```sql
 -- 1. Creating JSON on the fly
 -- Let's pretend we are building a JSON object from our film table.
 SELECT 
@@ -51,4 +48,3 @@ SELECT
 FROM film
 GROUP BY feature
 ORDER BY total_count DESC;
-```

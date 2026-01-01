@@ -1,5 +1,3 @@
-
-```SQL
 -- 1. Email Campaign
 SELECT LOWER(email) AS clean_email
 FROM customer
@@ -54,5 +52,3 @@ FROM film
 WHERE release_year = 2006
   AND rental_rate < 1.50
   AND (rating = 'G' OR rating = 'PG');
-
-```

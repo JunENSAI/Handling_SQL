@@ -1,8 +1,5 @@
-`SET OPERATIONS`
+-- SET OPERATIONS : Pagila DB
 
-**Database: Pagila**
-
-```sql
 -- 1. UNION ALL (The Append)
 -- We want a list of all names in our database (Actors AND Customers).
 SELECT first_name, last_name FROM actor
@@ -27,4 +24,3 @@ SELECT first_name, last_name FROM customer;
 SELECT film_id FROM film
 EXCEPT
 SELECT film_id FROM inventory;
-```

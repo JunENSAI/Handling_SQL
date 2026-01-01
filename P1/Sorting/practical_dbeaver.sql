@@ -1,8 +1,5 @@
-/* LAB: SORTING & LOGIC
-   Database: Pagila
-*/
+-- SORTING & LOGIC : Pagila DB
 
-```sql
 -- 1. Basic Sorting
 -- List the longest movies first.
 SELECT title, length
@@ -55,4 +52,3 @@ ORDER BY address2 ASC; -- NULLs are at the bottom by default in ASC
 SELECT address, address2
 FROM address
 ORDER BY address2 ASC NULLS FIRST;
-```

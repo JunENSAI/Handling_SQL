@@ -1,4 +1,3 @@
-```sql
 --Q1 : Find the Top 10 customers based on the total amount of money they have paid.
 
 SELECT 
@@ -83,4 +82,3 @@ inner join staff s
 	on p.staff_id = s.staff_id
 GROUP BY s.store_id
 ORDER BY total_money desc;
-```

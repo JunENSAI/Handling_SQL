@@ -1,8 +1,5 @@
-`RUNNING TOTALS`
+-- RUNNING TOTALS : Pagila DB
 
-**Database: Pagila**
-
-```sql
 -- 1. Cumulative Revenue
 -- How much money have we made over time?
 -- We order by payment_date, so the sum grows row by row.
@@ -51,4 +48,3 @@ SELECT
 FROM payment
 ORDER BY customer_id, amount DESC
 LIMIT 20;
-```
