@@ -38,17 +38,17 @@ def populate_prices():
         # Download real data
         stock = yf.Ticker(ticker)
         hist = stock.history(period="1mo")
-        
-        # Clean Data for SQL : yfinance index is the Date. We need it as a column.
         hist = hist.reset_index()
         
-        # Select and Rename columns to match our SQL Schema
+        # 1. Create DataFrame with the Data first (so Pandas knows row count)
         df_sql = pd.DataFrame()
-        df_sql['company_id'] = ticker
         df_sql['price_date'] = hist['Date']
         df_sql['open_price'] = hist['Open']
         df_sql['close_price'] = hist['Close']
         df_sql['volume'] = hist['Volume']
+        
+        # 2. NOW we can broadcast the ticker to all rows
+        df_sql['company_id'] = ticker 
         
         # Load to DB
         df_sql.to_sql('stock_prices', engine, if_exists='append', index=False)
